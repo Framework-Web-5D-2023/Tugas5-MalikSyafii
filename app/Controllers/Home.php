@@ -6,12 +6,23 @@ class Home extends BaseController
 {
   public function index(): string
   {
-    return view('welcome_message');
-  }
-
-  public function pertemuan(): void
-  {
-    $title = "pertemuan 3";
-    echo "welcome pertemuan";
+    // dd($this->mahasiswaModel->getAllMahasiswa());
+    $mahasiswa = $this->mahasiswaModel->getAllMahasiswa();
+    $data = [
+      "title" => "Home",
+      "nama" => "Alfian Vito",
+      "biodata" => [
+        [
+          "name" => "Irfan",
+          "npm" => "20202222"
+        ],
+        [
+          "name" => "Toni",
+          "npm" => "20213102222"
+        ],
+      ],
+      "mahasiswa" => $mahasiswa,
+    ];
+    return view('home/index', $data);
   }
 }

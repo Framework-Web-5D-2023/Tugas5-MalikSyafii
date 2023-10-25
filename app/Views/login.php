@@ -1,8 +1,8 @@
-<?= $this->extend('template') ?>
+<?= $this->extend('layout/template') ?>
 
 <?= $this->section('content') ?>
 <div class="container m-auto mt-5" style="width:500px;">
-  <h1 class="mb-3">Loginnn</h1>
+  <h1 class="mb-3">Login</h1>
   <form method="post" action="/login/signin">
     <div>
       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -19,5 +19,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <div>
+
+  </div>
 </div>
 <?= $this->endSection() ?>

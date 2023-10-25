@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Tautan ke Bootstrap CSS -->
-  <link href="{{ ROOT_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= site_url("assets/bootstrap.css"); ?>" rel="stylesheet">
 
   <title><?= $title ?></title>
 </head>
 
 <body>
+  <?= $this->include("layout/navbar"); ?>
   <?= $this->renderSection('content') ?>
 </body>
 
-<script type="text/javascript" src="{{  }}bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?= site_url("assets/bootstrap.js"); ?>"></script>
 
 <script>
   // codingan javascript
