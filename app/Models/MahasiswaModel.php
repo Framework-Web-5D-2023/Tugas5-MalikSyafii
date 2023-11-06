@@ -8,7 +8,6 @@ class MahasiswaModel extends Model
 {
   protected $table      = 'mahasiswa';
   protected $primaryKey = 'id';
-  // protected $fields = ["nama", "npm", "prodi"];
   protected $protectFields = false;
 
 
@@ -21,6 +20,11 @@ class MahasiswaModel extends Model
   }
 
   public function createMahasiswa($data)
+  {
+    return $this->insert($data);
+  }
+
+  public function create($data)
   {
     return $this->insert($data);
   }

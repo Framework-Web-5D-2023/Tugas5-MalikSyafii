@@ -54,7 +54,7 @@ class Login extends BaseController
       "prodi" => "INFORMATIKA"
     ];
 
-    $this->mahasiswaModel->createMahasiswa($data);
+    $this->mahasiswaModel->create($data);
     return redirect()->to('/login/signup');
   }
 }
