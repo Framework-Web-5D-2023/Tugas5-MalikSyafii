@@ -30,11 +30,6 @@
       <h3 class="d-inline-block"><?= $mahasiswa["minat"]; ?></h3>
     </div>
     <div class="mt-5">
-      <h3 style="width:200px;" class="d-inline-block">Nama Orangtua </h3>
-      <span class="d-inline-block mx-3">:</span>
-      <h3 class="d-inline-block"><?= $mahasiswa["nama_orangtua"]; ?></h3>
-    </div>
-    <div class="mt-5">
       <h3 style="width:200px;" class="d-inline-block">Jenis Kelamin </h3>
       <span class="d-inline-block mx-3">:</span>
       <h3 class="d-inline-block"><?= $mahasiswa["jenis_kelamin"]; ?></h3>

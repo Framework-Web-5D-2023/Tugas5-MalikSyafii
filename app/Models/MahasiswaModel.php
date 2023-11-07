@@ -19,6 +19,11 @@ class MahasiswaModel extends Model
     return $this->findAll();
   }
 
+  public function getDetailMahasiswa($id)
+  {
+    return $this->find($id);
+  }
+
   public function createMahasiswa($data)
   {
     return $this->insert($data);
