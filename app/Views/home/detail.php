@@ -25,7 +25,7 @@
       <h3 class="d-inline-block"><?= $mahasiswa["domisili"]; ?></h3>
     </div>
     <div class="mt-5">
-      <h3 style="width:200px;" class="d-inline-block">Ninat </h3>
+      <h3 style="width:200px;" class="d-inline-block">Minat </h3>
       <span class="d-inline-block mx-3">:</span>
       <h3 class="d-inline-block"><?= $mahasiswa["minat"]; ?></h3>
     </div>

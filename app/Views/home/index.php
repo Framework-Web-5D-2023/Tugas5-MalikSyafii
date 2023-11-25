@@ -19,6 +19,7 @@
         <th scope="col">NPM</th>
         <th scope="col">Prodi</th>
         <th scope="col">Action</th>
+        <th scope="col"> </th>
       </tr>
     </thead>
     <tbody>
@@ -29,7 +30,11 @@
           <td><?= $m["nama"]; ?></td>
           <td><?= $m["npm"]; ?></td>
           <td><?= $m["prodi"]; ?></td>
-          <td><a href="<?= site_url("/" . $m["id"]); ?>" class="btn btn-primary btn-sm">Detail</a></td>
+          <td>
+            <a href="<?= site_url("delete/" . $m["id"]); ?>" class="btn btn-danger btn-sm">Delete</a>
+            <a href="<?= site_url("/" . $m["id"]); ?>" class="btn btn-primary btn-sm">Detail</a>
+            <a href="<?= site_url("updateMahasiswa/" . $m["id"]); ?>" class="btn btn-primary btn-sm">Update</a>
+          </td>
         </tr>
       <?php endforeach; ?>
     </tbody>
@@ -84,25 +89,26 @@
               <div class="col-12 row mb-3">
                 <div class="col-6">
                   <div class="form-group">
-                    <label for="domiisili">Domiisili</label>
-                    <input type="text" id="domiisili" name="domiisili" class="form-control" placeholder="domiisili" aria-label="domiisili">
+                    <label for="domisili">Domisili</label>
+                    <input type="text" id="domisili" name="domisili" class="form-control" placeholder="domisili" aria-label="domisili">
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-group">
-                    <label for="jenis_kelamin">Jenis Kelamin</label>
-                    <input type="text" id="jenis_kelamin" name="jenis_kelamin" class="form-control" placeholder="jenis_kelamin" aria-label="jenis_kelamin">
+                    <label for="jenis_kelamin" class="form-label">Jenis Kelamin</lablabel>
+                      <select name="jenis_kelamin" id="jenis_kelamin" class="form-select" required>
+                        <option value="">Jenis Kelamin</option>
+                        <option value="L">L</option>
+                        <option value="P">P</option>
+                      </select>
                   </div>
                 </div>
               </div>
-
-
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save</button>
-          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
         </form>
       </div>
     </div>

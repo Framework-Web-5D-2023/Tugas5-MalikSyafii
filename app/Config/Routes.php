@@ -21,6 +21,13 @@ $routes->post('/login/signin', 'Login::signin');
 $routes->get('/login/signup', 'Login::signup');
 $routes->post('/login/signup/create', 'Login::create_signup');
 
-// Pertemuan 5 
+// Pertemuan 5 cd
 $routes->get('/pertemuan5', 'Pertemuan5::index');
 $routes->post('/pertemuan5/create', 'Pertemuan5::create');
+
+//update
+$routes->get('/updateMahasiswa/(:num)', 'Home::updateMahasiswa/$1');
+$routes->post('/updateMahasiswa/update/(:num)', 'Home::updateMahasiswaAction/$1');
+
+//delete
+$routes->get('/delete/(:num)', 'Home::deleteMahasiswa/$1');
